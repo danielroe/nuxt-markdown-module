@@ -17,23 +17,23 @@ const md = MD({
       rel: 'noopener'
     }
   })
-  .use(MarkdownAnchor)
+  .use((MarkdownAnchor as unknown) as (md: MD, ...params: any[]) => void)
 
 interface NuxtModule {
   extendBuild(callback: (config: Configuration) => void): void
 }
 
-export default function NuxtMarkdownModule(this: NuxtModule): void {
+export default function NuxtMarkdownModule (this: NuxtModule): void {
   this.extendBuild((config) => {
-    if (!config.module) return
+    if (!config.module) {
+      return
+    }
 
     config.module.rules.push({
       test: /\.md$/,
       loader: 'frontmatter-markdown-loader',
       options: {
-        markdown: (body: string) => {
-          return md.render(body)
-        },
+        markdown: (body: string): string => md.render(body),
         vue: true
       }
     })
