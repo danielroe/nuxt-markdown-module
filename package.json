@@ -24,8 +24,8 @@
     "markdown-it-link-attributes": "^3.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
+    "@babel/core": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "@nuxtjs/eslint-config": "^1.1.2",
@@ -49,6 +49,6 @@
     "jest": "^24.9.0",
     "nuxt-ts-edge": "^2.9.0-26065450.b73115e5",
     "standard-version": "^7.0.0",
-    "typescript": "^3.6.4"
+    "typescript": "^3.7.2"
   }
 }
