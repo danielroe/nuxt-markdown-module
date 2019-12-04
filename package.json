@@ -49,6 +49,6 @@
     "jest": "^24.9.0",
     "nuxt-ts-edge": "^2.9.0-26065450.b73115e5",
     "standard-version": "^7.0.1",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.3"
   }
 }
